@@ -124,7 +124,47 @@
              <input type="submit" value="yazdır detay" class="btn">
         </form>    
     </div>
+          </center>
+                            <div class="table-responsive">
+                                <table id="zero-conf" class="table table-hover" style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Kimlik No</th>
+                                            <th>Ad Soyad</th>
+                                            <th>Doğum Tarihi</th>
+                                            <th>Baba Adı</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="jojjoojj">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.getElementById('first').addEventListener("keyup", function() {
+        this.value = this.value.toLocaleUpperCase("tr-TR");
+    });
 
+    document.getElementById('last').addEventListener("keyup", function() {
+        this.value = this.value.toLocaleUpperCase("tr-TR");
+    });
+</script>
+<script type="text/javascript">
+    function clearResults() {
+
+        $("#jojjoojj").html(
+            '<tr class="odd"><td valign="top" colspan="21" class="dataTables_empty">No data available in table</td></tr>'
+        );
+
+        $("#first").val("");
+        $("#last").val("");
+    }
 </body>
 
 <script src="app.js"></script>
